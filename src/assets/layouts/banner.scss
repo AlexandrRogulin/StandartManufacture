@@ -5,6 +5,7 @@
   background: url("../images/backgrounds/banner@2x.jpg") 50% / cover no-repeat;
   display: flex;
   align-items: center;
+  margin-top: 115px;
 
   &__content {
     margin-left: 320px;
@@ -68,6 +69,7 @@
 
 @media screen and (max-width: 768px) {
   .banner {
+    margin-top: 46px;
     &__title {
       font-size: 48px;
       line-height: 64px;
