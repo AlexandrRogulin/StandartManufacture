@@ -1,0 +1,48 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  background: $white;
+  max-width: 1920px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  color: $black;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+  color: $black;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+  background: $white;
+}
+input:active::-webkit-input-placeholder {
+  color: transparent;
+  background: $white;
+}
+
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

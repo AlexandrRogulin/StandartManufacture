@@ -1,0 +1,133 @@
+.footer {
+  padding: 61px 150px 61px 320px;
+  background: $white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  &__logo {
+    width: 45%;
+  }
+  &__info {
+    width: 55%;
+  }
+  &__info_address,
+  &__info_phone {
+    width: 50%;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__icon img {
+    height: 22px;
+    width: 22px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Montserrat";
+    font-style: normal;
+
+    &_address {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &_phone {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .footer {
+    padding: 41px 100px;
+
+    &__info_address {
+      width: 60%;
+    }
+    &__info_phone {
+      width: 40%;
+    }
+    &__info {
+      &_address,
+      &_phone {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 31px 50px;
+    &__logo img {
+      width: 210px;
+      height: 52px;
+    }
+
+    &__info {
+      &_address,
+      &_phone {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    &__info {
+      flex-direction: column;
+    }
+    &__info_address,
+    &__info_phone {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px 15px;
+    &__logo,
+    &__info {
+      width: 50%;
+    }
+    &__logo img {
+      width: 105px;
+      height: 26px;
+    }
+    &__info {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__info_address {
+      display: none;
+    }
+
+    &__info_phone {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+  }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    &__info_phone {
+      font-size: 13px;
+        line-height: 17px;
+    }
+  }
+}

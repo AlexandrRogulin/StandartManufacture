@@ -1,0 +1,205 @@
+.availability {
+  background: $caramel;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 72px;
+    padding-bottom: 65px;
+  }
+
+  &__title {
+    margin-bottom: 77px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__item {
+    width: 302px;
+    height: 376px;
+    background: $white;
+    box-shadow: 0px 5.10782px 11.4926px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+
+    &_img img {
+      width: 302px;
+      height: 194px;
+      cursor: pointer;
+    }
+
+    &_title {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.02em;
+      padding: 16px 18px;
+    }
+
+    &_form {
+      padding: 0 18px 15px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      &-left,
+      &-right {
+        width: 50%;
+      }
+    }
+
+    &_price {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+    }
+
+    &_order {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+
+    &_count {
+      width: 40px;
+      margin-right: 3px;
+      border: 0.5px solid #c9c9c9;
+      border-radius: 3px;
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+    }
+
+    &_text {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+.availability__btn {
+  margin-top: 18px;
+
+  &_style {
+    width: 126px;
+    height: 41px;
+    border: 1px solid $black;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    background: $white;
+    color: $black;
+  }
+  &_style:hover {
+    background: #f0f0f0;
+  }
+}
+
+.availability__modal_info {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1400px) {
+  .availability {
+    &__block {
+      width: 80%;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .availability {
+    &__block {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .availability {
+    &__container {
+      padding-top: 26px;
+      padding-bottom: 8px;
+    }
+
+    &__block {
+      justify-content: space-around;
+    }
+
+    &__title {
+      margin-bottom: 41px;
+    }
+    &__item {
+      width: 290px;
+      height: 316px;
+
+      &_img img {
+        width: 290px;
+        height: 186px;
+      }
+
+      &_title {
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        padding: 14px 18px;
+      }
+
+      &_form {
+        padding: 0 18px 18px;
+      }
+
+      &_price {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &_count {
+        width: 38px;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+      }
+
+      &_text {
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  .availability__btn {
+  
+    &_style {
+      width: 98px;
+      height: 32px;
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+  }
+}

@@ -1,0 +1,246 @@
+.form-container {
+  max-width: 1920px;
+  display: flex;
+  align-items: center;
+  height: 794px;
+  background: url("../images/backgrounds/forms_background_@2x.jpg") 50% / cover
+    no-repeat;
+  position: relative;
+}
+
+.form {
+  background: $white;
+  width: 452px;
+  height: 528px;
+  position: absolute;
+  right: 309px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 56px;
+  padding-bottom: 42px;
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__desc {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $granit;
+  }
+
+  &__input {
+    width: 340px;
+    height: 85px;
+    border-radius: 3px;
+    border: 1px solid $gray;
+    margin-bottom: 20px;
+    padding-left: 30px;
+  }
+
+  &__input::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    padding-left: 30px;
+  }
+
+  &__input-tel::placeholder {
+    background: url("../images/phone-form.svg") 0 50% no-repeat;
+  }
+
+  &__input-tel:active::placeholder {
+    background: none;
+    color: transparent;
+  }
+
+  &__input-email::placeholder {
+    background: url("../images/Email-form.svg") 0 50% no-repeat;
+  }
+
+  &__btn {
+    width: 340px;
+    height: 63px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: $white;
+    background: $green;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 21px;
+  }
+
+  &__btn:hover {
+    background: #3bbb03;
+  }
+
+  &__btn:active {
+    background: #298601;
+  }
+}
+
+.checkbox.checkbox__style {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  left: -30px;
+}
+
+.checkbox.checkbox__style input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.checkbox__style input:checked ~ .checkbox__checkmark {
+  background-color: $green;
+}
+
+.checkbox.checkbox__style input:checked ~ .checkbox__checkmark:after {
+  opacity: 1;
+}
+
+.checkbox.checkbox__style:hover input ~ .checkbox__checkmark {
+  background-color: #eee;
+}
+
+.checkbox.checkbox__style:hover input:checked ~ .checkbox__checkmark {
+  background-color: $green;
+}
+
+.checkbox.checkbox__style .checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid $green;
+  transition: background-color 0.25s ease;
+  border-radius: 3px;
+}
+
+.checkbox.checkbox__style .checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid $white;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.checkbox.checkbox__style .checkbox__body {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 130%;
+  color: #7e868e;
+}
+
+.checkbox__body a {
+  text-decoration: underline;
+  color: #7e868e;
+}
+
+@media screen and (max-width: 1400px) {
+  .form {
+    right: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    height: 620px;
+  }
+  .form {
+    position: relative;
+    margin: 0 auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-container {
+    height: 392px;
+  }
+  .form {
+    width: 235px;
+    height: 294px;
+    padding-top: 26px;
+    padding-bottom: 27px;
+
+    &__desc {
+      font-size: 10px;
+      line-height: 13px;
+    }
+
+    &__input {
+      width: 182px;
+      height: 45px;
+      padding-left: 10px;
+    }
+
+    &__input::placeholder {
+      font-size: 8.6px;
+      line-height: 160%;
+      padding-left: 15px;
+    }
+
+    &__input-tel::placeholder {
+      background: url("../images/phone-form-mobile.svg") 0 50% no-repeat;
+    }
+
+    &__input-email::placeholder {
+      background: url("../images/Email-form-mobile.svg") 0 50% no-repeat;
+    }
+
+    &__btn {
+      width: 182px;
+      height: 34px;
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .checkbox.checkbox__style {
+    left: -14px;
+    padding-left: 15px;
+  }
+  .checkbox.checkbox__style .checkbox__checkmark {
+    width: 8px;
+    height: 8px;
+    border-radius: 0;
+  }
+
+  .checkbox.checkbox__style .checkbox__body {
+    font-size: 6px;
+    line-height: 130%;
+  }
+}

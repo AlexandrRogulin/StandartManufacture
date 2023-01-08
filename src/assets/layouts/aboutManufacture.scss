@@ -1,0 +1,63 @@
+.about-manufacture {
+  background: url("../images/backgrounds/background_crab.png") 50% / cover
+    no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+  padding-bottom: 75px;
+
+  &__title {
+    padding-bottom: 80px;
+    text-align: center;
+  }
+
+  &__video {
+    width: 1280px;
+    height: 720px;
+    border: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .about-manufacture {
+    &__video {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-manufacture {
+    padding-bottom: 32px;
+    padding-top: 32px;
+
+    &__title {
+      padding-bottom: 32px;
+    }
+    &__video {
+      height: 320px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-manufacture {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__video {
+      height: 240px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+    .about-manufacture {
+      &__video {
+        height: 180px;
+      }
+    }
+  }

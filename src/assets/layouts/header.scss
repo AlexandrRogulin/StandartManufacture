@@ -1,0 +1,214 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.header {
+  background: $white;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: $black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__fd_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: $white;
+    position: relative;
+    display: none;
+  }
+
+  &__burger-btn span {
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    background: $black;
+    left: 6px;
+  }
+
+  &__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+  }
+
+  &__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+  }
+
+  &__burgerMenu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__logo {
+    width: 220px;
+    height: 55px;
+  }
+
+  &__navbar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__navbar_link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 44px;
+  }
+
+  &__navbar_link a:hover {
+    text-decoration: underline;
+  }
+
+  &__navbar__link a:active {
+    color: #6c6c6c;
+  }
+
+  &__navbar_link:last-child {
+    margin-right: 60px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__contacts_city,
+  &__contacts_phone {
+    display: flex;
+  }
+
+  &__contacts-marker {
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .header__contacts-marker img {
+    height: 17px;
+    width: 17px;
+    color: $black;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+  }
+
+  .header__contacts_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 42px;
+  }
+
+  &__contacts_info:first-child {
+    margin-right: 0;
+  }
+
+  &__contacts_info b,
+  &__contacts_info .none-underline {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $black;
+  }
+
+  &__contacts_info a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $green;
+  }
+
+  &__contacts_info a:hover {
+    text-decoration: underline;
+  }
+
+  &__contacts_info a:active {
+    text-decoration: none;
+  }
+  &__contacts_info .none-underline:hover {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header {
+    &__fd_row {
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+    }
+
+    &__top {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__burger-btn {
+      display: block;
+    }
+
+    &__burgerMenu {
+      flex-direction: column;
+    }
+
+    &__navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+
+    &__navbar_link {
+      font-size: 24px;
+      padding-top: 20px;
+    }
+
+    &__contacts {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__contacts-marker {
+      margin-left: 25px;
+    }
+  }
+
+  .open-menu {
+    display: flex;
+  }
+  .closed-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__top {
+      align-items: center;
+    }
+    &__logo {
+      width: 105px;
+      height: 26px;
+    }
+  }
+}

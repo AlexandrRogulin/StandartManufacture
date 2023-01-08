@@ -1,0 +1,123 @@
+.reviews {
+  max-width: 1920px;
+  background: url("../images/backgrounds/reviews_bg.png") 50% / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 83px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 96px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 12px;
+    width: 411px;
+    height: 554px;
+    background: $white;
+    border: 1px solid $lightGray;
+    padding: 24px 32px 50px;
+
+    &_img {
+      padding-bottom: 24px;
+    }
+
+    &_img img {
+      width: 134px;
+      height: 134px;
+      border-radius: 50%;
+    }
+
+
+    &_title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    &_text {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .reviews {
+    &__block {
+      flex-direction: column;
+    }
+    &__item {
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+      height: auto;
+      margin: 8px 15px;
+
+      &_img {
+        margin-right: 14px;
+      }
+
+      &_title {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reviews {
+    &__item {
+      padding: 14px;
+      &_img img {
+        width: 70px;
+        height: 70px;
+      }
+      &_title {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      &_title p {
+        margin-bottom: 5px;
+      }
+
+      &_text {
+        font-size: 11px;
+        line-height: 15px;
+      }
+      &_text p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

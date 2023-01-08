@@ -1,0 +1,144 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 88px;
+  padding-bottom: 78px;
+
+  &__title {
+    margin-bottom: 75px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__item {
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__item_img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  &__item_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $black;
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  &__item_desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $black;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .about-us {
+    &__item {
+      width: 49%;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-us {
+    &__block {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 80%;
+      flex-direction: row;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin: 0 auto;
+    }
+
+    &__item_info {
+      padding-left: 10px;
+    }
+
+    &__item_title {
+      text-align: left;
+      padding: 0;
+    }
+
+    &__item_desc {
+      text-align: left;
+    }
+
+    &__item_title br {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-us {
+    padding-top: 32px;
+    padding-bottom: 38px;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__item  {
+      width: 100%;
+    }
+    &__item_img img {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__item_title {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    &__item_desc {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .about-us {
+    &__item_img img {
+      width: 51px;
+      height: 51px;
+    }
+
+    &__item_title {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__item_desc {
+      font-size: 14px;
+      line-height: 13px;
+    }
+  }
+}
