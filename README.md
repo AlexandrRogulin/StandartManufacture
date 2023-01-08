@@ -1,5 +1,8 @@
-# StandartManufacture
+# [StandartManufacture](https://vermillion-pithivier-1e2ef3.netlify.app/)
+
+<img src="preview.jpg" style='max-width: 1280px' />
 Выполнение тестового задания на должность помощника WEB-разработчика для "ЗАВОД ГОТОВЫХ ТЕПЛИЦ"
+Ссылка на [сайт](https://vermillion-pithivier-1e2ef3.netlify.app/)
 
 Проект представляет собой landing-page. При разработке применялись фреймворк Vue.js и препроцессор SCSS.
 Структура сайта:
